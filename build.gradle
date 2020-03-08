@@ -13,9 +13,6 @@ repositories {
     mavenCentral()
 }
 
-shadowJar {
-    destinationDir = file('../Compiled-plugins')
-}
 
 dependencies {
     compileOnly fileTree(dir: '/../../libs', include: ['*.jar'])
