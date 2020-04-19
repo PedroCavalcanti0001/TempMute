@@ -10,17 +10,17 @@
 # Resolve links: $0 may be a link
 PRG="$0"
 # Need this for relative symlinks.
-while [ -h "$PRG" ] ; do
-    ls=`ls -ld "$PRG"`
+while [ -h "playerRG" ] ; do
+    ls=`ls -ld "playerRG"`
     link=`expr "$ls" : '.*-> \(.*\)$'`
     if expr "$link" : '/.*' > /dev/null; then
         PRG="$link"
     else
-        PRG=`dirname "$PRG"`"/$link"
+        PRG=`dirname "playerRG"`"/$link"
     fi
 done
 SAVED="`pwd`"
-cd "`dirname \"$PRG\"`/" >/dev/null
+cd "`dirname \"playerRG\"`/" >/dev/null
 APP_HOME="`pwd -P`"
 cd "$SAVED" >/dev/null
 
@@ -165,7 +165,7 @@ APP_ARGS=$(save "$@")
 eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS "\"-Dorg.gradle.appname=$APP_BASE_NAME\"" -classpath "\"$CLASSPATH\"" org.gradle.wrapper.GradleWrapperMain "$APP_ARGS"
 
 # by default we should be in the correct project dir, but when run from Finder on Mac, the cwd is wrong
-if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
+if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "playerWD" ]; then
   cd "$(dirname "$0")"
 fi
 

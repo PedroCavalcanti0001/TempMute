@@ -1,0 +1,189 @@
+mysql:
+  password: ''
+  host: 'localhost'
+  database: 'test'
+  port: 3306
+  user: 'root'
+  table: 'RevolutionBosses_users'
+
+#Tempo de delay para bater no boss
+#Em segundos
+delayToHit: 30
+
+killersSwords:
+  hitKill:
+    item: "276"
+    name: "&b&lMATADORA HITKILL"
+    lore:
+      - ""
+      - "&aKill instantanea."
+  hitOp:
+    item: "276"
+    name: "&b&lMATADORA HITOP"
+    lore:
+      - ""
+      - "&aDano por hit: &f{damage}"
+
+bosses:
+  0:
+    item: "1"
+    life: 1000.0
+    name: "&aBoss crazy"
+    drops:
+      0:
+        item: "1:1"
+        name: "&aDrop do boss crazy"
+        lore:
+          - "&aBoss louquito"
+        command: "say {player} recolheu sua recompensa"
+      1:
+        item: "1:1"
+        name: "&aDrop do boss crazy 2"
+        lore:
+          - "&aBoss louquito 2"
+        command: "say {player} recolheu sua recompensa 2"
+
+
+guis:
+  topKillers:
+    title: "[Top Matadores]"
+    rows: 3
+    items:
+      player:
+        item: "397:3"
+        name: "&6&l{position}# &e&l{player}"
+        lore:
+          - " "
+          - "&6Bosses matados: &f{killedBosses}"
+      previousGUI:
+        item: "331"
+        name: "&aMenu anterior"
+        lore:
+          - " "
+          - "&6<===="
+        position:
+          row: 2
+          collunm: 4
+  main:
+    title: "[Bosses]"
+    rows: 3
+    items:
+      information:
+        item: "339"
+        name: "&aInformações: "
+        lore:
+          - " "
+          - "&6Player: &f{player}"
+          - "&6Bosses matados: &f{killedBosses}"
+          - " "
+          - "&aClique para ver o top matadores."
+        position:
+          row: 1
+          collunm: 2
+      selectBoss:
+        item: "341"
+        name: "&6Selecionar boss: "
+        lore:
+          - " "
+          - "&6Boss atual: &f{selectedBoss}"
+          - " "
+          - "&aClique para selecionar um boss."
+        position:
+          row: 1
+          collunm: 3
+        subMenu:
+          title: "[Selecionar boss] #{page}"
+          rows: 5
+          items:
+            nextPage:
+              item: "262"
+              name: "&aProxima paginda"
+              lore:
+                - " "
+                - "&f---->"
+              position:
+                row: 2
+                collunm: 8
+            previousPage:
+              item: "262"
+              name: "&aPagina anterior"
+              lore:
+                - " "
+                - "&f<----"
+              position:
+                row: 2
+                collunm: 0
+            previousGUI:
+              item: "331"
+              name: "&aMenu principal"
+              lore:
+                - " "
+                - "&c<====="
+              position:
+                row: 4
+                collunm: 4
+            boss:
+              lore:
+                - " "
+                - "&aID: &f{id}"
+                - '&aQuantidade: {amount}'
+                - "&aVida: &f{currentLife}/{maximumLife}"
+                - " "
+              position:
+                row: 4
+                collunm: 4
+      drops:
+        item: "175"
+        name: "&dSeus drops: "
+        lore:
+          - " "
+          - "&aClique para selecionar um boss."
+        position:
+          row: 1
+          collunm: 5
+        subMenu:
+          title: "[Drops] #{page}"
+          rows: 5
+          items:
+            nextPage:
+              item: "262"
+              name: "&aProxima paginda"
+              lore:
+                - " "
+                - "&f---->"
+              position:
+                row: 2
+                collunm: 8
+            previousPage:
+              item: "262"
+              name: "&aPagina anterior"
+              lore:
+                - " "
+                - "&f<----"
+              position:
+                row: 2
+                collunm: 0
+            previousGUI:
+              item: "331"
+              name: "&aMenu principal"
+              lore:
+                - " "
+                - "&c<====="
+              position:
+                row: 4
+                collunm: 4
+      equipSword:
+        item: "276"
+        name: "&eEquipar espada: "
+        loreWithoutEquipment:
+          - " "
+          - "&aClique aqui com uma espada"
+          - "&ana mão para equipar."
+        equippedLore:
+          - ""
+          - "&aTipo: {type}"
+          - "&aDano por hit: &f{hitDamage}"
+        position:
+          row: 1
+          collunm: 6
+
