@@ -1,8 +1,8 @@
-name: RevolutionBosses
-description: plugin de bosses.
+name: tempmute
+description: plugin de mute.
 author: zKingOfKill
 version: '1.0'
-main: me.zkingofkill.revolutionbosses.Main
+main: me.zkingofkill.tempmute.Main
 
 commands:
-  bosses:
+  tempmute:
